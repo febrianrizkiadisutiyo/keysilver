@@ -1,0 +1,97 @@
+
+/* navbar */
+body {
+    padding-top: 80px;
+}
+.navbar-brand {
+    padding-right: 600px;
+}
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        padding-right: 0px;
+    }
+}
+.nav-itemm {
+    padding: 10px;
+}
+.nav-linkk {
+    font-size: 18px;
+    color: whitesmoke;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3 ease;
+}
+.nav-linkk:hover::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: whitesmoke;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+.nav-linkk::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: whitesmoke;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='whitesmoke' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* home */
+.about h1 {
+    text-align: center;
+}
+.about h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00ff04;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.contact-button:hover {
+    background-color: #00FF04FF;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
